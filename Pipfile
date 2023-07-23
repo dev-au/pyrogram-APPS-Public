@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pyrogram = "==2.0.106"
+tgcrypto = "==1.2.5"
+aiohttp = "==3.8.4"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
