@@ -36,7 +36,7 @@ async def downloading_protects(target_chat_id: int, target_message_id: int):
                                            duration=file_downloading.duration)
                     except AttributeError:
                         await media_method(chat_id='me', **{type(file_downloading).__name__.lower(): file_path})
-                    os.remove(file_path)
+                    #os.remove(file_path)
         elif message.text:
             await app.send_message(chat_id='me', text=message.text)
 
