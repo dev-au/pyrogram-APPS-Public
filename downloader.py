@@ -6,12 +6,11 @@ from pyrogram import Client
 api_id = 0
 api_hash = ''
 phone_number = ""
-client_app = Client("my_account", api_id, api_hash, phone_code="", phone_number=phone_number)
 logging.basicConfig(level=logging.INFO)
 
 
 async def downloading_protects(target_chat_id: int, target_message_id: int):
-    async with Client("my_account", api_id, api_hash, phone_code="+998", phone_number=phone_number) as app:
+    async with Client("my_account", api_id, api_hash, phone_code="", phone_number=phone_number) as app:
         app: Client
         message = await app.get_messages(chat_id=target_chat_id, message_ids=target_message_id)
         if not message.empty and not message.text:
